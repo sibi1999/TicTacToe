@@ -1,0 +1,11 @@
+
+<Main>
+<span> Next turn is {{getCurrentPlayer()}}</span>
+<div class="grid-container">
+<app-square *ngFor="let square of squares;let i=index"
+(click)="makeMove(i)" [squareValue]="squares[i]"
+></app-square>
+</div>
+<div *ngIf="Winner">{{Winner}}</div>
+
+</Main>
